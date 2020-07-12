@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-forgot-password',
@@ -20,8 +21,9 @@ export class ForgotPasswordPage implements OnInit {
   constructor(
     private authService: AuthService,
     private formBuilder: FormBuilder,
-    private router: Router
-  ) {}
+    private router: Router,
+    private navCtrl: NavController
+  ) { }
 
   ngOnInit() {
     this.validationForm = this.formBuilder.group({
@@ -37,5 +39,10 @@ export class ForgotPasswordPage implements OnInit {
 
   recoreyPassword(value) {
     this.authService.recover(value.email);
+  }
+
+  goToLogin() {
+    this.navCtrl.setDirection("root");
+    this.router.navigate(['/login']);
   }
 }

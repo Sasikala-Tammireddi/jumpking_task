@@ -60,11 +60,12 @@
                 </a>
               </ion-text>
             </ion-col>
-            <p style="text-align: center;margin-left: 40px;">Don't have an account?<a (click)="goToRegister()">Sign
-                Up</a></p>
-            <ion-col size="12" class="ion-text-center">
-              <ion-button class="custom-btn ion-text-capitalize font-size-20 font-weight-bold" type="submit"
-                [disabled]="!validationForm.valid" shape="round" style="margin-top: 48px;">
+            <ion-col size="12" class="ion-text-center ion-margin-top">
+              <ion-text color="dark" class="font-size-16">
+                Don't have an account? <a style="color: var(--ion-color-tertiary);" (click)="goToRegister()">Sign Up</a>
+              </ion-text>
+              <ion-button class="custom-btn ion-text-capitalize font-size-16 font-weight-bold" type="submit"
+                [disabled]="!validationForm.valid" shape="round" style="margin-top: 32px;">
                 Log in
               </ion-button>
             </ion-col>

@@ -8,8 +8,8 @@
       </div>
       <div class="auth-section">
         <h1>Sign Up</h1>
-        <p class="font-size-20">It's easier to sign up now</p>
-        <ion-button class="ion-text-capitalize login-facebook" shape="round" size="large">
+        <p class="font-size-20" style="margin: 8px auto;">It's easier to sign up now</p>
+        <ion-button class="ion-text-capitalize login-facebook font-size-16" shape="round" size="large">
           <ion-icon class="ion-margin-end" name="logo-facebook"></ion-icon>
           Continue with Facebook
         </ion-button>
@@ -28,9 +28,11 @@
           <ion-icon slot="icon-only" name="logo-linkedin"></ion-icon>
         </ion-button>
       </div>
-      <ion-text color="medium" class="font-size-20">
-        Already have account? <a style="color: var(--ion-color-tertiary);" (click)="goToLogin()">Login</a>
-      </ion-text>
+      <div class="ion-margin-bottom">
+        <ion-text color="medium" class="font-size-16">
+          Already have account? <a style="color: var(--ion-color-tertiary);" (click)="goToLogin()">Login</a>
+        </ion-text>
+      </div>
     </ion-col>
   </ion-row>
 

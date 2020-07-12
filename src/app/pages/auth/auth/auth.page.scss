@@ -1,5 +1,5 @@
 .logo {
-  margin-bottom: 96px;
+  margin-bottom: 56px;
   h1,
   p {
     background: linear-gradient(
@@ -34,15 +34,14 @@
 }
 
 .login-facebook {
-  --background: rgb(90, 112, 239);
   --background: linear-gradient(
     120deg,
     rgba(90, 112, 239, 1) 0%,
-    rgba(90, 112, 239, 1) 35%,
+    rgba(90, 112, 239, 1) 20%,
     rgba(50, 66, 232, 1) 100%
   );
-  box-shadow: 0px 6px 16px #3241e84f;
-  border-radius: 30px;
+  --box-shadow: 0px 8px 8px #3242e829;
+  --border-radius: 30px;
   margin: 32px 0 26px 0;
 }
 

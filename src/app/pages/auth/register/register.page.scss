@@ -1,5 +1,5 @@
 .upper-section {
-  height: 30%;
+  height: 35%;
   .welcome-container {
     background: rgb(90, 112, 239);
     background: linear-gradient(
@@ -11,8 +11,8 @@
     width: 360px;
     height: 360px;
     border-radius: 50%;
-    position: fixed;
-    top: -100px;
+    position: relative;
+    top: -120px;
     left: -100px;
     box-shadow: 0px 0px 16px #3242e88f;
     //   border: 1px solid #fff;
@@ -39,9 +39,10 @@
 }
 
 .lower-section {
-  height: 70%;
+  height: 65%;
 
   form {
+    margin-top: 32px;
     ion-item {
       ion-toggle {
         --handle-width: 12px;
