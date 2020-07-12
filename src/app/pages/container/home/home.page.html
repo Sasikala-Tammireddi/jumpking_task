@@ -18,8 +18,8 @@
   <ion-slides [options]="slideOpts">
     <ion-slide *ngFor="let slide of slideArray;let type of types">
       <div style="display: inline-block">
-        <ion-avatar style="width:50px;height:50px;margin-bottom:4px;">
-          <img style="height: 100%;width: 100%;" src="assets\images\image.jpg" />
+        <ion-avatar style="width:60px;height:60px;margin-bottom:4px;">
+          <img style="height: 100%;width: 100%;" src="assets\images\brand4.jpg" />
         </ion-avatar>
         <p style="font-size: 12px;margin-top:0px; font-family: 'Times New Roman', Times, serif;text-align:unset;">
           {{type}}</p>
@@ -51,26 +51,26 @@
       <img style="width:100%;height:100%;padding: none;margin: none;" src="assets\images\images.jpg" />
     </div>
 
-    <section style="height:300px;width: 100%;padding:0px;margin-left: 0px;background: white;">
-      <p style="margin-left:15px;font-size: 16px;padding-top:20px">DEALS OF THE DAY</p>
+    <section style="height:300px;width: 100%;padding:0px;margin-left: 0px;">
+      <p style="margin-left:15px;font-size: 14px;padding-top:10px; text-align: center;">DEALS OF THE DAY</p>
       <ion-slides [options]="slideOption">
         <ion-slide *ngFor="let slide of slideArray">
-          <div style="width:100%;height:230px;padding: none;margin:0px;margin-left:10px;">
+          <div style="width:100%;height:230px;padding: none;margin:0px;margin-left:10px;border:1px solid lightgrey">
             <img style="width:100%;height:100%;padding: none;margin:0px;" src="assets/images/myntra4.jpg" />
           </div>
         </ion-slide>
       </ion-slides>
     </section>
 
-    <div style="background: white;margin-top:20px;height:450px;padding:10px;margin-left: 0px;margin-right: 0px;">
+    <div style="background: white;height:470px;padding:10px;margin-left: 0px;margin-right: 0px;">
       <p style="text-align: left;margin-top: 10px;margin-left:15px;font-size: 14px;">CATEGORIES TO SHOP</p>
       <div style="background: whitesmoke;height:90%;padding:10px;margin-left: 10px;margin-right: 10px;">
-        <ion-row style="margin-left: 20px;">
+        <ion-row style="margin-left: 10px">
           <ion-col size="4" *ngFor="let category of categories;let type of bags">
-            <ion-avatar style="height: 80px;width: 80px;border:0.5px solid lightgray">
+            <ion-avatar style="height: 90px;width: 90px;border:0.5px solid lightgray">
               <img style="height: 100%;width: 100%;" src="assets/images/image.jpg" />
             </ion-avatar>
-            <p style="margin-top: 5px;text-align: center;font-size: 12px;color:black">+{{type}}</p>
+            <p style="margin-top: 5px; text-align:center;font-size: 12px;color:black">+{{type}}</p>
           </ion-col>
         </ion-row>
       </div>
