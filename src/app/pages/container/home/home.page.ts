@@ -10,36 +10,7 @@ export class HomePage implements OnInit {
   public categories: Array<any> = [];
   public shopPopularCategories: Array<string> = [];
   public styles: any = {};
-  public bags = [
-    "MEN",
-    "WOMEN",
-    "KIDS",
-    "BEAUTY",
-    "HOME",
-    "ESSENTIALS",
-    "JEWELLERY",
-    "GADGETS",
-    "FURNISHING",
-  ];
-  public slideOpts = {
-    slidesPerView: 4.8,
-    spaceBetween: 0,
-  };
-  public slideOptions = {
-    slidesPerView: 1,
-    slidesPerColumn: 1,
-    slidesPerGroup: 1,
-    watchSlidesProgress: true,
-    spaceBetween: 0,
-    autoplay: {
-      delay: 1000,
-    },
-  };
 
-  public slideOption = {
-    slidesPerView: 1.8,
-    spaceBetween: 10,
-  };
   constructor() { }
 
   ngOnInit() {
