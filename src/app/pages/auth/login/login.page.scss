@@ -1,0 +1,54 @@
+.upper-section {
+  height: 30%;
+  .welcome-container {
+    background: rgb(90, 112, 239);
+    background: linear-gradient(
+      120deg,
+      rgba(90, 112, 239, 1) 0%,
+      rgba(90, 112, 239, 1) 35%,
+      rgba(50, 66, 232, 1) 100%
+    );
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    box-shadow: 0px 0px 16px #3242e88f;
+    //   border: 1px solid #fff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    div {
+      margin: 0px 0px 80px 64px;
+      p,
+      h1 {
+        margin: 0;
+      }
+      p {
+        font-size: 20px;
+      }
+      h1 {
+        font-size: 52px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.lower-section {
+  height: 70%;
+
+  form {
+    ion-item {
+      ion-toggle {
+        --handle-width: 12px;
+        --handle-height: 12px;
+        height: 8px;
+        width: 26px;
+      }
+    }
+  }
+}

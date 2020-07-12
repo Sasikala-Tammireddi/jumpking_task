@@ -1,0 +1,7 @@
+{
+  "name": "login-ui",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

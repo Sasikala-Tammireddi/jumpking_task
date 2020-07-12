@@ -1,0 +1,76 @@
+<ion-content>
+  <section class="upper-section">
+    <div class="welcome-container">
+      <div>
+        <p>Welcome Back,</p>
+        <h1>Log In!</h1>
+      </div>
+    </div>
+  </section>
+  <section class="lower-section ion-padding">
+    <ion-row class="h-100 ion-justify-content-center ion-align-items-center">
+      <ion-col size="12">
+        <form [formGroup]="validationForm" (ngSubmit)="loginUser(validationForm.value)">
+          <ion-item input>
+            <span>Email Address</span>
+            <ion-input type="email" placeholder="Enter e-mail" formControlName="email"></ion-input>
+          </ion-item>
+          <div class="validation-errors ion-padding-start">
+            <ng-container *ngFor="let validation of validationMessages.email">
+              <div class="error-message font-size-14"
+                *ngIf="validationForm.get('email').hasError(validation.type) && (validationForm.get('email').dirty || validationForm.get('email').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+          <ion-item input>
+            <span>Password</span>
+            <ion-input [type]="isPasswordVisible ? 'text' : 'password'" placeholder="Enter password"
+              formControlName="password"></ion-input>
+            <ion-buttons slot="end" mode="md">
+              <ion-button slot="end" fill="clear" (click)="showPassword()" [hidden]="isPasswordVisible">
+                <ion-icon slot="icon-only" color="medium" name="eye-outline"></ion-icon>
+              </ion-button>
+              <ion-button slot="end" fill="clear" (click)="showPassword()" [hidden]="!isPasswordVisible">
+                <ion-icon slot="icon-only" color="medium" name="eye-off-outline"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-item>
+          <div class="validation-errors ion-padding-start">
+            <ng-container *ngFor="let validation of validationMessages.password">
+              <div class="error-message font-size-14"
+                *ngIf="validationForm.get('password').hasError(validation.type) && (validationForm.get('password').dirty || validationForm.get('password').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+          <ion-row class="ion-justify-content-between" style="margin-top: 4px;">
+            <ion-col size="6" class="ion-text-left ion-no-padding">
+              <ion-item lines="none" class="font-size-12 ion-no-padding">
+                <ion-toggle color="tertiary" style="padding:4px"></ion-toggle>
+                <ion-label>
+                  <p class="font-size-14" style="color: #000000;">Remember me</p>
+                </ion-label>
+              </ion-item>
+            </ion-col>
+            <ion-col size="6" class="ion-text-right ion-no-padding">
+              <ion-text color="dark">
+                <a class="font-size-14" style="line-height: 48px; color: #000000;" (click)="forgotPassword()">
+                  Forgot Password?
+                </a>
+              </ion-text>
+            </ion-col>
+            <p style="text-align: center;margin-left: 40px;">Don't have an account?<a (click)="goToRegister()">Sign
+                Up</a></p>
+            <ion-col size="12" class="ion-text-center">
+              <ion-button class="custom-btn ion-text-capitalize font-size-20 font-weight-bold" type="submit"
+                [disabled]="!validationForm.valid" shape="round" style="margin-top: 48px;">
+                Log in
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </section>
+</ion-content>
